@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+
+    <!-- Bootstrap -->
+    <link href="theme.scss" rel="stylesheet">
+
+    {{ content_for_header }}
+
+    <script type="text/javascript">
+      NB.appConfig.userIsLoggedIn = {{request.logged_in?}};
+    </script>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Rubik:300,500" rel="stylesheet">
+
+    {% if page.type_name == 'Donation' or page.type_name == 'Donation (v2)' %}
+      <script type="text/javascript" src="jquery.ui.effect.min.js"></script>
+      <script type="text/javascript" src="jquery.ui.effect-slide.min.js"></script>
+      <script type="text/javascript" src="staged-donations.js"></script>
+    {% endif %}
+
+    {% if page.is_homepage? and site.has_header_image? %}
+      <script type="text/javascript" src="splashHeader.js"></script>
+    {% endif %}
+
+  </head>
+  
+  {% if site.has_background_image? %}
+      <!--[if lt IE 9]>
+      <script type="text/javascript" src="/javascripts/jquery.backstretch.min.js"></script>
+      <script type="text/javascript">
+        jQuery.backstretch("{{ site.background_image_url }}", {speed: 0});
+      </script>
+      <![endif]-->
+      <style>
+        @media(min-width: 666px){
+        .page-type-donation-v2 {
+          background: url('{{ site.background_image_url }}') no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+      }
+    </style>
+    {% endif %}
+      
+
+  <body class="aware-theme v2-theme {{ page.page_class_name }} page-{{ request.template | replace: '_', '-' }} js">
+    <div id="orange-bar"></div>
+    {% if page.is_homepage? and site.has_header_image? %}
+      <div class="splash">
+        <div class="container">
+          <div class="splash-background" style="background-image: url({{ site.header_image_url_1026 }})">
+            <div class="overlay"></div>
+            <h1 class="splash-title inverse strong">{{ site.subheadline }}</h1>
+            <a class="splash-arrow"><img src="down-arrow.png" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    {% assign squeeze = false %}
+    {% if page.type_name == "Donation" or page.type_name == "Donation (v2)" %}
+      {% assign squeeze = true %}
+    {% else %}
+      {% for tag in page.tags %}
+        {% if tag.slug == "squeeze_page" %}
+          {% assign squeeze = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <div {% if page.is_homepage? and site.has_header_image? %}class="splash-wrapper"{% endif %}>
+      {% include "nav" %}
+
+      {% if page.features_count > 0 %}
+        {% include "features" %}
+      {% endif %}
+
+      <div class="main-container" id="middle">
+        <div class="main clearfix">
+
+          <div class="column content-{{ request.template  | replace: '_', '-' }}">
+            <div class="columns-1-flash">
+              <div class="container">
+                {{ content_for_notifications }}
+              </div>
+            </div>
+            {% yield %}
+          </div><!-- .column -->
+
+        </div>
+        <!-- .main -->
+      </div>
+      <!-- .main-container -->
+
+      {{ content_for_footer }}
+
+      {% unless squeeze == true or request.template == "user_sessions_new_wide" %}
+        <footer>
+          <div class="container">
+
+            <div class="row">
+              <div class="col-sm-4">
+                <div class=" footer-social-links">
+                  <img src="http://d3n8a8pro7vhmx.cloudfront.net/themes/5b9379bc4764e87afe3d581d/attachments/original/1537035640/bca-logo-white.png?1537035640" alt="Derek Corrigan and the BCA">
+                  <h4>Connect</h4>
+                  <p class="address">
+                    Box 54559 - 7155 Kingsway<br>
+                    Burnaby, BC V5E 4J6</p>
+                  {% if site.has_twitter? %}
+                  <a class="twitter" target="_blank" href="{{ site.broadcaster.twitter_profile_url }}">
+                    <span class="icon-twitter-squared"></span></a>
+                  {% endif %}
+                  {% if site.has_facebook_page? %}
+                  <a class="facebook" target="_blank" href="{{ site.broadcaster.facebook_page_profile_url }}">
+                    <span class="icon-facebook-squared"></span></a>
+                  {% endif %}
+                </div>
+                
+
+              </div>
+              <div class="col-sm-4">
+                {% subpage "home" with "quicklinks" %}
+              </div>
+              
+              <div class="col-sm-4">
+								<div class="span4">  
+									<div id="footercontact">
+										<h4>Contact Us</h4>
+										{% subpage "contact" with "contactform" %}
+                    </div> 
+                  </div>
+               	 	{% if site.has_button1? or site.has_button2? or site.has_button3? %}
+                    <ul class="footer-nav">
+                      {% if site.has_button1? %}
+                      <li><h5 class="secondary strong"><a href="{{ site.button1_page.full_url_with_profile_recruiter }}" title="site.button1_text">{{ site.button1_text | upcase }}</a></h5></li>
+                      {% endif %}
+
+                      {% if site.has_button2? %}
+                      <li><h5 class="secondary strong"><a href="{{ site.button2_page.full_url_with_profile_recruiter }}" title="site.button2_text">{{ site.button2_text | upcase }}</a></h5></li>
+                      {% endif %}
+
+                      {% if site.has_button3? %}
+                      <li><h5 class="secondary strong"><a href="{{ site.button3_page.full_url_with_profile_recruiter }}" title="site.button3_text">{{ site.button3_text | upcase }}</a></h5></li>
+                      {% endif %}
+                    </ul>
+                	{% endif %}
+
+	                <div class="clearfix">
+  	                {% include "signup_form" with site.signup_page %}
+    	            </div>
+
+              
+
+                </div>
+
+            </div>
+			
+          </div>
+          {% if site.footer_content.size > 0 %}
+          	<div id="footer-text">
+              <div class="footer-text">{{ site.footer_content }}</div>
+            </div>
+          {% endif %}
+          <!-- container -->
+        </footer>
+        
+      {% endunless %}
+      {% if request.current_user.is_intern? %}
+        {% include "cp_nav" %}
+      {% endif %}
+
+      <script src="bootstrap.js"></script>
+      <script src="action.js" type="text/javascript"></script>
+
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,532 @@
+.page-type-donation-v2 {
+    [for='donation_amount_other'] {
+        display: block;
+        width: 100%;
+        position: static;
+        background: transparent !important;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .currency,
+    .page-type-donation-v2 .donation,
+    .page-pages-show-donation-v2-wide .progress-indicator-stages li.completed .stage-count-inner:before,
+    .page-pages-show-donation-wide .progress-indicator-stages li.completed .stage-count-inner:before {
+        color: #ff8200 !important;
+    }
+
+    .confirm-amount-label {
+        position: static;
+        display: block;
+        text-align: center;
+        color: #626260;
+    }
+
+    .cc-confirm-true {
+        color: #626260;
+        line-height: 20px;
+        font-size: 18px;
+    }
+
+    .page-type-donation-v2.page-pages-show-donation-v2-wide .submit-container {
+        background-color: none !important;
+    }
+
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before,
+    .flex-next:before,
+    .flex-prev:before {
+        color: #ff8200;
+        padding-left: 6px;
+    }
+
+    .page-type-donation-v2 .donation {
+        color: #ff8200;
+    }
+
+    .StripeElement {
+        border: none !important;
+    }
+
+    .payment-nb-buitlin {
+        border-bottom: 1px solid #ff8200;
+    }
+
+    .form-error {
+        margin-top: 15px;
+    }
+
+    #donation_billing_address_address1,
+    #donation_billing_address_address2,
+    .city-province-postal-v2,
+    .email-phone-v2 {
+        margin-top: 10px;
+    }
+
+    #other-label {
+        color: black;
+        display: block;
+        background-color: transparent;
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .donation-v2-options {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #donation_amount_other_input {
+        display: inline-block;
+        width: 150px !important;
+    }
+
+    #donation_email_opt_in {
+        position: static;
+        margin: 0px;
+    }
+
+    .page-header .width-container,
+    .intro.donation {
+        border: none;
+    }
+
+    .progress-stages {
+        padding: 20px 30px;
+    }
+
+    .v2-word-content.intro {
+        padding: 18px 0px;
+
+        p {
+            margin: 0px;
+        }
+    }
+
+    .header-container,
+    footer {
+        display: none;
+    }
+
+    .width-container {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .v2-word-content {
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+
+    .row-fluid .span6 {
+        width: 100%;
+    }
+
+    .stage-label {
+        color: #000;
+    }
+
+    .row-fluid [class*="span"] {
+        margin-left: 0px;
+    }
+
+    .us-or-canada,
+    .v2-city {
+        margin-right: 9px;
+    }
+
+    .tax-info {
+        color: #000;
+        font-size: 15px;
+        font-size: 13px;
+    }
+
+    .confirm-amount-label {
+        font-weight: 400;
+        color: #000;
+        font-size: 17px;
+    }
+
+    .email-phone-v2,
+    .city-province-postal-v2,
+    .first-last-v2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .email-phone-v2,
+    .first-last-v2 {
+        .span6 {
+            width: 48%;
+        }
+    }
+
+    .city-province-postal-v2 .span4 {
+        width: 31.3%;
+    }
+
+    .cc-expire-label {
+        margin: 0px;
+    }
+
+    .cc-expire-selection {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+
+        #donation_card_expires_on_1i,
+        #donation_card_expires_on_2i {
+            width: 48%;
+            margin-top: 0px;
+        }
+
+        .cc-expire {
+            width: 100%;
+        }
+    }
+
+    .donate-rules,
+    .donate-rules-header {
+        color: #000;
+    }
+
+    .donate-rules-header,
+    .confirm-amount-label {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .donate-rules {
+        margin: 0px;
+        text-align: left;
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .cc-confirm-true {
+        margin-bottom: 27px;
+    }
+
+    .cc-confirm-submit-container {
+        margin-top: 17px;
+    }
+
+    .form-errors {
+        margin-bottom: 0px;
+    }
+
+    #errorExplanation {
+        padding: 20px;
+        text-align: center;
+        margin: 0px;
+
+        h2 {
+            font-size: 18px;
+            color: white;
+        }
+
+        ul,
+        li {
+            padding: 0px;
+            font-size: 15px;
+        }
+    }
+
+    .confirm-number {
+        margin-left: -6px;
+    }
+
+    .donation-v2-amounts span {
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .card-error {
+        color: red;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .ElementsApp .InputElement {
+        font-family: Roboto !important;
+    }
+
+    .donation-v2-option {
+        width: 100%;
+    }
+}
+
+@media(min-width: 666px) {
+    .page-pages-show-donation-v2-wide .donation_form .form-wrap {
+        margin-bottom: 0px;
+    }
+
+    .donation-other-input-container {
+        color: #FF8200;
+    }
+
+    .page-type-donation-v2 {
+        .width-container {
+            -webkit-box-shadow: 11px 7px 22px -3px #000;
+            box-shadow: 11px 7px 22px -3px #000;
+        }
+
+        span.progress-stage-button-next.button:hover {
+            color: #FF8200;
+            background-color: white;
+        }
+
+        .v2-word-content {
+            background-color: white;
+            margin-bottom: -43px;
+
+            .headline {
+                margin-left: 11px;
+            }
+
+            .intro {
+                margin: 18px 14px;
+                padding-bottom: 35px;
+            }
+        }
+
+        .page-pages-show-donation-v2-wide .radio-inline label.radio {
+            width: 100% !important;
+        }
+
+        .form-wrap {
+            margin-bottom: 0px;
+        }
+
+        .width-container {
+            max-width: 400px;
+            margin-left: 10%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .headline {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        .cc-expire-selection {
+            #donation_card_expires_on_1i {
+                width: 26%;
+            }
+
+            #donation_card_expires_on_2i {
+                width: 34%;
+            }
+
+            .cc-expire {
+                width: 33%;
+            }
+        }
+    }
+}
+
+.page-type-donation-v2 {
+
+    #page-headline-top {
+        display: none;
+    }
+
+    .form-wrap {
+        padding: 0px;
+    }
+
+    .donation_form .form-progress-indicator {
+        background-color: #ff8200;
+    }
+
+    #donation-bg-container {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .donation {
+        font-size: 30px;
+        line-height: 40px;
+        color: #FF8200;
+        text-align: left;
+    }
+
+    .radio-inline {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+
+        span {
+            width: 29.11%;
+        }
+
+        label.radio {
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .page-type-donation-v2 {
+        .donate-box {
+            max-width: 470px;
+        }
+
+        .donation-body,
+        #intro {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #intro {
+            max-width: 100%;
+        }
+
+        .donation_form {
+            background-color: white;
+        }
+
+        #donation-bg-container {
+            width: 100%;
+            margin: 0px;
+        }
+
+        footer {
+            margin-top: 0px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .page-type-donation-v2 .page-pages-show-donation-v2-wide .radio-inline label.radio {
+        width: 100%;
+    }
+}
+
+@media(min-width: 768px) {
+    .page-pages-show-donation-wide {
+        #intro {
+            padding: 0 50px;
+        }
+
+        .form-wrap {
+            padding: 0px;
+        }
+    }
+
+    .page-type-donation-v2.page-pages-show-donation-v2-wide .radio-inline.donation-v2-amounts span {
+        width: 31.33% !important;
+        padding: 0px !important;
+        margin-top: 15px;
+    }
+}
+
+.payment-nb-buitlin {
+    border-bottom: 1px solid #009cfb;
+}
+
+//-- Added 180916 by Michael Roy --//
+
+input {
+    color: #222;
+    background-color: white;
+    border: 2px solid $brand-primary;
+    -webkit-appearance: none;
+    display: inline-block;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: middle;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+}
+
+span.progress-stage-button-next.button {
+    background: #ff8200;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    padding: 12px 37px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.page-pages-show-donation-v2-wide .progress-indicator-stages li.completed .stage-count-inner:before,
+.page-pages-show-donation-wide .progress-indicator-stages li.completed .stage-count-inner:before {
+    color: #FF8200 !important;
+}
+
+.page-pages-show-donation-v2-wide .progress-indicator-stages li,
+.page-pages-show-donation-wide .progress-indicator-stages li {
+    width: 63px;
+}
+
+.page-pages-show-donation-v2-wide p {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+span.progress-stage-button-next.button:hover {
+    color: #FF8200;
+    background-color: white;
+}
+
+#donation_is_confirmed {
+    margin-left: -24px;
+}
+
+label {
+    pointer-events: auto !important;
+}
+
+#feedback_email_opt_in,
+#feedback_is_volunteer {
+    margin-left: -21px;
+}
+
+#contact_page_new_feedback_form label .checkbox {
+    margin-top: 0px;
+}
+
+#contact_page_new_feedback_form .submit-button {
+    margin-top: 19px;
+}
+
+#contact_page_new_feedback_form .feedback_content,
+.feedback_email .submit-button {
+    margin-left: -10px;
+}
