@@ -368,7 +368,12 @@
                 </div>
 
 
-                <label for="donation_is_confirmed" class="checkbox padtop cc-confirm-true">{% check_box "is_confirmed", class:"checkbox" %} {{ page.donation_v2.merchant_account.contribution_rules }}</label>
+                <label for="donation_is_confirmed" class="checkbox padtop cc-confirm-true">
+                  <input class="checkbox " id="is_confirmed" name="is_confirmed" type="checkbox" value="1" checked />
+                  <p class="bc-resident-autochecked">
+                    {{ page.donation_v2.merchant_account.contribution_rules }}
+                  </p>
+                </label>
                 
                 <div class="submit-container">
                   {% submit_tag "Process Donation", class:"submit-button" %}
