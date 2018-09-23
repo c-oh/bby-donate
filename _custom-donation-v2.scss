@@ -531,17 +531,18 @@ label {
     margin-left: -10px;
 }
 
-.bc-resident-autochecked{
+.bc-resident-autochecked {
     margin-left: 25px;
     margin-top: -5px;
 }
 
-.page-type-donation-v2 #errorExplanation h2{
+.page-type-donation-v2 #errorExplanation h2 {
     display: none;
 }
 
-.page-type-donation-v2 #errorExplanation ul{
+.page-type-donation-v2 #errorExplanation ul {
     padding: 0 9px;
+    text-align: left;
 }
 
 .page-type-donation-v2 #errorExplanation li {
@@ -549,9 +550,28 @@ label {
     font-size: 19px;
     color: red;
     line-height: 25px;
+    margin-bottom: 12px;
 }
 
 
-.page-type-donation-v2 #errorExplanation{
+.page-type-donation-v2 #errorExplanation {
     padding-top: 0px;
+}
+
+.form-errors ul li {
+    border: none;
+}
+
+@media(min-width: 666px) {
+    .page-type-donation-v2 .width-container {
+        float: right;
+        margin-right: 10%;
+    }
+}
+
+.page-pages-show-donation-v2-wide .error-message{
+    font-weight: bold;
+     line-height: 21px !important; 
+    text-align: left;
+    display: block;
 }
