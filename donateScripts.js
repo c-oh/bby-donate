@@ -90,3 +90,5 @@ document.getElementById("donation_amount_5").value = askInc4;
 document.getElementById("label5").innerText = dollar + askInc4;
 document.getElementById("donation_amount_6").value = askInc5;
 document.getElementById("label6").innerText = dollar + askInc5;
+
+

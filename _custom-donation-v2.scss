@@ -535,3 +535,23 @@ label {
     margin-left: 25px;
     margin-top: -5px;
 }
+
+.page-type-donation-v2 #errorExplanation h2{
+    display: none;
+}
+
+.page-type-donation-v2 #errorExplanation ul{
+    padding: 0 9px;
+}
+
+.page-type-donation-v2 #errorExplanation li {
+    padding: 0px;
+    font-size: 19px;
+    color: red;
+    line-height: 25px;
+}
+
+
+.page-type-donation-v2 #errorExplanation{
+    padding-top: 0px;
+}

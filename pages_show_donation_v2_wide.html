@@ -367,12 +367,13 @@
                   {% endif %}
                 </div>
 
+                
 
                 <label for="donation_is_confirmed" class="checkbox padtop cc-confirm-true">
-                  <input class="checkbox " id="is_confirmed" name="is_confirmed" type="checkbox" value="1" checked />
-                  <p class="bc-resident-autochecked">
+                  {% check_box "is_confirmed", class:"checkbox" %}
+                  
                     {{ page.donation_v2.merchant_account.contribution_rules }}
-                  </p>
+                
                 </label>
                 
                 <div class="submit-container">
@@ -405,3 +406,6 @@
 
 <script src="donateScripts.js"></script>
 <script src="/assets/liquid/theme_donation_v2.js"></script>
+<script language="JavaScript">
+  $(".form-errors ul li:contains('confirmed')").text('Please confirm you are a resident of BC in step 3');
+  </script>
