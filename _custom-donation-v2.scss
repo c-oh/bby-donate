@@ -609,6 +609,7 @@ label {
     }
     #bottomnav a, .widget-page-type-donation-v2 p, footer p{
         font-size: 18px;
+        line-height: 23px;
     }
     #quicklinks h4, #footercontact h4{
         font-size: 24px;
@@ -626,6 +627,21 @@ label {
     footer .footer-text p{
         font-size: 13px;
     }
-
+    .nav-donate-button a{
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0px;
+        font-weight: bold;
+        font-size: 19px;
+        padding: 18px 27px;
+        border-radius: 0px;
+        background-color: #6D6E70;
+    }
     
+}
+
+@media(min-width: 768px){
+    .nav-donate-button{
+        float: left;
+    }
 }
